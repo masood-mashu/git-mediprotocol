@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "eligibility_criteria_evaluator",
+  "description": "Evaluates patient laboratory biomarker values against inclusion and exclusion criteria",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "patient_data_json": {
+        "type": "string",
+        "description": "JSON string containing patient lab results"
+      }
+    },
+    "required": [
+      "patient_data_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

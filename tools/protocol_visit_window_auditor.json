@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "protocol_visit_window_auditor",
+  "description": "Audits patient visit completion dates against scheduled trial protocol windows",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "visit_offset_days": {
+        "type": "string",
+        "description": "Number of days deviation from scheduled protocol date"
+      }
+    },
+    "required": [
+      "visit_offset_days"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

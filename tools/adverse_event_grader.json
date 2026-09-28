@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "adverse_event_grader",
+  "description": "Maps clinical toxicity and symptom reports to CTCAE v5.0 severity grades",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "event_description": {
+        "type": "string",
+        "description": "Description of the adverse event"
+      }
+    },
+    "required": [
+      "event_description"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}
