@@ -1,0 +1,18 @@
+name: adverse-event-grader
+version: 1.0.0
+description: "Maps clinical toxicity and symptom reports to CTCAE v5.0 severity grades"
+input_schema:
+  type: object
+  properties:
+    event_description:
+      type: string
+      description: "Description of the adverse event or toxicity parameter"
+  required:
+    - event_description
+implementation:
+  type: script
+  path: adverse_event_grader.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

@@ -1,0 +1,39 @@
+spec_version: "0.1.0"
+name: git-mediprotocol
+version: 1.0.0
+description: "Autonomous Clinical Trial Protocol Compliance, Adverse Event Grading & Patient Eligibility Verification Agent"
+author: "masood-mashu"
+license: "Apache-2.0"
+
+model:
+  preferred: "openai:gpt-4o"
+  fallback:
+    - "anthropic:claude-3-5-sonnet"
+    - "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.1
+    max_tokens: 4096
+
+skills:
+  - clinical-eligibility-verification
+  - ctcae-adverse-event-triage
+
+tools:
+  - eligibility-criteria-evaluator
+  - adverse-event-grader
+  - protocol-visit-window-auditor
+
+runtime:
+  max_turns: 50
+  timeout: 120
+
+tags:
+  - healthcare
+  - clinical-trials
+  - ctcae
+  - hipaa
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-mediprotocol-01"
+  passport_category: "Healthcare"

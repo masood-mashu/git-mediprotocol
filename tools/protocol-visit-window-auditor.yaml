@@ -1,0 +1,18 @@
+name: protocol-visit-window-auditor
+version: 1.0.0
+description: "Audits patient visit completion dates against scheduled trial protocol windows"
+input_schema:
+  type: object
+  properties:
+    visit_offset_days:
+      type: string
+      description: "Number of days deviation from scheduled trial protocol visit date"
+  required:
+    - visit_offset_days
+implementation:
+  type: script
+  path: protocol_visit_window_auditor.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
